@@ -155,7 +155,7 @@ body {
 	z-index: 10;
 }
 .back {
-	background: #efefef url(../images/deck.jpg);
+	background: #efefef url(../images/cardback.png);
 	-webkit-transform-style: preserve-3d; 
     -moz-transform-style: preserve-3d; /** fixes non transitive 3d from parent and child **/
     transform-style: preserve-3d;
