@@ -16,7 +16,7 @@ zmr.dinoGame = (function(jQ) {
 	var uiPlay = jQ("#gamePlay");
 	var uiTimer = jQ("#timer");
 	
-	var cardDeck = ['brownDino',  'brownDino', 'trex', 'trex', 'dipdino', 'dipdino', 'greenDino', 'greenDino', 'purpDino', 'purpDino', 'burgDino', 'burgDino', 'orangeDino', 'orangeDino', 'purp2Dino', 'purp2Dino', 'pinkDino', 'pinkDino'];
+	var cardDeck = ['brownDino',  'brownDino1', 'trex', 'trex1', 'dipdino', 'dipdino1', 'greenDino', 'greenDino1', 'purpDino', 'purpDino1', 'burgDino', 'burgDino', 'orangeDino', 'orangeDino', 'purp2Dino', 'purp2Dino', 'pinkDino', 'pinkDino'];
 
 	var init = function(){
 		uiComplete.hide();
