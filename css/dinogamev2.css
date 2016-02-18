@@ -151,11 +151,11 @@ body {
 }
 
 .front {
-	background: url(../images/deck.jpg) 0 -146px;
+	background: url(../images/cardback.png) 0 -146px;
 	z-index: 10;
 }
 .back {
-	background: #efefef url(../images/cardback.png);
+	background: #efefef url(../images/deck.png);
 	-webkit-transform-style: preserve-3d; 
     -moz-transform-style: preserve-3d; /** fixes non transitive 3d from parent and child **/
     transform-style: preserve-3d;
