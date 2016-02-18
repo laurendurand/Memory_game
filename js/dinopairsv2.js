@@ -12,8 +12,8 @@ var uiPlay = $("#gamePlay");
 var uiTimer = $("#timer");
 
 var matchingGame = {};
-matchingGame.deck = ['blueDino', 'blueDino','brownDino', 'brownDino','redDino', 'redDino','greenDino', 'greenDino','purpDino', 'purpDino','burgDino', 'burgDino',
-'orangeDino', 'orangeDino','purp2Dino', 'purp2Dino','pinkDino', 'pinkDino',];
+matchingGame.deck = ['blueDino', 'blueDino','brownDino', 'brownDino','brownDinoa', 'brownDinoa','greenDino', 'greenDino','purpDino', 'purpDino','burgDino', 'burgDino',
+'orangeDino', 'orangeDino','purp2Dino', 'purp2Dino','trex', 'trex',];
 
 $(function(){
 	  init();
