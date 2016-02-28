@@ -2,6 +2,8 @@ if(typeof zmr !== 'object'){
 	var zmr = {};
 }
 
+zmr.masterCardDeck = ['blueDino',  'blueDino', 'brownDino', 'brownDino', 'redDino', 'redDino', 'greenDino', 'greenDino', 'purpDino', 'purpDino'];
+
 zmr.dinoGame = (function(jQ) {
 	var score;
 	var cardsmatched;
@@ -16,7 +18,7 @@ zmr.dinoGame = (function(jQ) {
 	var uiPlay = jQ("#gamePlay");
 	var uiTimer = jQ("#timer");
 	
-	var cardDeck = ['blueDino',  'blueDino', 'brownDino', 'brownDino', 'redDino', 'redDino', 'greenDino', 'greenDino', 'purpDino', 'purpDino', 'burgDino', 'burgDino', 'orangeDino', 'orangeDino', 'purp2Dino', 'purp2Dino', 'pinkDino', 'pinkDino'];
+	var cardDeck = zmr.masterCardDeck.slice(0); // Clone the deck
 
 	var init = function(){
 		uiComplete.hide();
@@ -47,17 +49,17 @@ zmr.dinoGame = (function(jQ) {
 			   		playGame = true;
 					cardDeck.sort(shuffle);
 					
-					for(var i=0;i<17;i++){
+					for(var i=0;i<zmr.masterCardDeck.length - 1;i++){
 						jQ(".card:first-child").clone().appendTo("#cards");
 					}
 					
 					// initialize each card's position
 					uiCards.children().each(function(index) {
 						
-						// align the cards to be 3x6 ourselves.
+						// align the cards to be 5x2 ourselves.
 						jQ(this).css({
-									"left" : (jQ(this).width() + 20) * (index % 6),
-									"top" : (jQ(this).height() + 20) * Math.floor(index / 6)
+									"left" : (jQ(this).width() + 20) * (index % 5),
+									"top" : (jQ(this).height() + 20) * Math.floor(index / 5)
 								});
 								// get a pattern from the shuffled deck
 								var pattern = cardDeck.pop();
@@ -123,7 +125,8 @@ zmr.dinoGame = (function(jQ) {
 	}
 	
 	var removeTookCards = function(){
-		if (cardsmatched < 8){
+		var cardsToMatch = (zmr.masterCardDeck.length / 2);
+		if (cardsmatched < cardsToMatch - 1){
 			cardsmatched++;
 			jQ(".card-removed").remove();
 		}else{
@@ -138,8 +141,7 @@ zmr.dinoGame = (function(jQ) {
 		playGame = false;
 		uiCards.html("<div class='card'><div class='face front'></div><div class='face back'></div></div>");
 		clearTimeout(scoreTimeout);
-		cardDeck = ['blueDino', 'blueDino','brownDino', 'brownDino','redDino', 'redDino','greenDino', 'greenDino','purpDino', 'purpDino','burgDino', 'burgDino',
-'orangeDino', 'orangeDino','purp2Dino', 'purp2Dino','pinkDino', 'pinkDino',];			
+		cardDeck = zmr.masterCardDeck.slice(0); // Clone the deck
 		startGame();
 	}
 
