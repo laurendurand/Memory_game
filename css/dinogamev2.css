@@ -7,7 +7,7 @@ body {
 	text-align: center;
 	background: url(../images/greenbg.png);
 	color: #fff;
-	font-family: myriad pro;	
+	font-family: montserrat light;	
 }
 #gameStats{
 	background: #001711;
@@ -41,7 +41,7 @@ body {
 	width: 200px;
 	float: right;
 	text-align: right;
-	font-family: myriad pro;
+	font-family: montserrat light;
 	padding: 0 10px 0 0;
 	color: #fff;
 	text-decoration:none;
