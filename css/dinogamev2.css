@@ -10,7 +10,7 @@ body {
 	font-family: montserrat light;	
 }
 #gameStats{
-	background: #001711;
+	background: black;
 	width: 1175px;
 	margin: 20px auto 20px;
 	display: block;
@@ -49,7 +49,7 @@ body {
 }
 
 #game {
-	background: #001711;
+	background: black;
 	width: 1155px;
 	height: 600px;
 	margin: 0 auto;
@@ -122,8 +122,8 @@ body {
 	border-radius: 5px;
 	display: block;
 	font-size: 30px;
-	margin: 50px auto 0;
-	padding: 100px;
+	margin: 100px auto 0;
+	padding: 10px;
 	width: 150px;
 	border: 5px solid #000;
 	color:#000;
@@ -149,6 +149,9 @@ body {
 	-webkit-transition-duration: .3s;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	border-radius: 20px;
 }
 
 .front {
@@ -161,7 +164,7 @@ body {
 	z-index: 10;
 }
 .back {
-	background: #efefef url(../images/deck.png);
+	background-size: 100% 100%;
 	-webkit-transform-style: preserve-3d; 
     -moz-transform-style: preserve-3d; /** fixes non transitive 3d from parent and child **/
     transform-style: preserve-3d;
@@ -171,8 +174,8 @@ body {
 	z-index: 8;
 }
 .card:hover .face, .card-flipped .face {
-	-webkit-box-shadow: 0 0 6px #aaa;
-	box-shadow: 0 0 6px #aaa;
+	-webkit-box-shadow: 0 0 15px #eee;
+	box-shadow: 0 0 15px #eee;
 }
 .card-flipped .front {
 	-webkit-transform-style: preserve-3d; 
@@ -195,16 +198,6 @@ body {
 .card-removed {
 	opacity: 0;
 }
-
-.blueDino {background-position: 0 0;}
-.brownDino {background-position: -110px 0;}
-.redDino {background-position: -220px 0;}
-.greenDino {background-position: -330px 0;}
-.purpDino {background-position: -440px 0;}
-.burgDino {background-position: -550px 0;}
-.orangeDino {background-position: -660px 0;}
-.purp2Dino {background-position: -770px 0;}
-.pinkDino {background-position: -880px 0;}
 
 
 #linkBack a.button {

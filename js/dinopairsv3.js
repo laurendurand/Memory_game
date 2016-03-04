@@ -2,7 +2,19 @@ if(typeof zmr !== 'object'){
 	var zmr = {};
 }
 
-zmr.masterCardDeck = ['blueDino',  'blueDino', 'brownDino', 'brownDino', 'redDino', 'redDino', 'greenDino', 'greenDino', 'purpDino', 'purpDino'];
+// Build the list of cards, matching images in /images/cards. Since the
+// board can only fit 2 rows of 5, slice the unique list down to 5 cards (10 total).
+zmr.cardList = ['API', 'CMS', 'DCS', 'DiGS', 'DSC', 'OS', 'Responsive', 'SLA'].slice(0, 5);
+zmr.masterCardDeck = [];
+
+// Build the deck using the card list.
+// The cards are in pairs of Title & Definition
+// using this convention: name.png and name1.png.
+for (var i = 0; i < zmr.cardList.length; i++) {
+	var card = zmr.cardList[i];
+	zmr.masterCardDeck.push(card);
+	zmr.masterCardDeck.push(card + "1");
+}
 
 zmr.dinoGame = (function(jQ) {
 	var score;
@@ -61,11 +73,12 @@ zmr.dinoGame = (function(jQ) {
 									"left" : (jQ(this).width() + 20) * (index % 5),
 									"top" : (jQ(this).height() + 20) * Math.floor(index / 5)
 								});
-								// get a pattern from the shuffled deck
-								var pattern = cardDeck.pop();
+								// get an image/pattern from the shuffled deck
+								var imageName = cardDeck.pop();
+								var pattern = imageName.replace(/[0-9]/g, '');
 								
-								// visually apply the pattern on the card's back side.
-								jQ(this).find(".back").addClass(pattern);
+								// visually apply the card image on the card's back side.
+								jQ(this).find(".back").css("background-image", "url(images/cards/" + imageName + ".png)");
 								
 								// embed the pattern data into the DOM element.
 								jQ(this).attr("data-pattern",pattern);
