@@ -1,10 +1,6 @@
-Dino Pairs Game
+Memory Game by the Digital Consumer Solutions team
 =============
 
-The idea behind this game is that my eldest son loves to play this game the traditional way so whilst playing one evening I thought I have a go at creating one online.
+The game consists in a glossary to help all central teams to learn the vocabulary related to the digital world
 
-Here's the result, hope you like it.
 
-Visit [the GitHub page](https://github.com/zammer/Dino_Pairs) for the low down.
-
-Dino Pairs Game is licensed under the MIT License.
